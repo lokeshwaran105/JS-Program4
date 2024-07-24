@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+    <script>
+
+        // Program 1
+
+        function longestWord(str){
+            let max = 0;
+            let arr = str.split(' ');
+            for(let i=0; i<arr.length; i++){
+                if(max < arr[i].length){
+                    max = arr[i];
+                }
+            }
+
+            return max;
+        }
+
+        let str = "Hello this is loki";
+
+        console.log(longestWord(str));
+
+        // Program 2
+
+        function majorityElement(arr) {
+            for(let i=0; i<arr.length; i++){
+                let cnt = 1;
+
+                for(let j=0; j<arr.length; j++){
+                    if(arr[i] == arr[j]){
+                        cnt++;
+                    }
+                }
+
+                if(cnt >= (arr.length/2)){
+                    return arr[i];
+                }
+            }
+        }
+
+        var arr = [1,2,2,2,4];
+        console.log(majorityElement(arr));
+
+        // Program 3
+
+        function arrayManipulation(arr) {
+            
+            arr.push(2);
+            arr.unshift(6);
+
+        }
+
+        var arr = [1,2,2,2,4];
+        arrayManipulation(arr);
+        console.log(arr);
+
+        // Program 4
+
+        function arrayRemove(arr) {
+            arr.pop();
+            arr.shift();
+        }
+
+        var arr = [1,2,2,2,4];
+        arrayRemove(arr);
+        console.log(arr);
+
+        // Program 5
+
+        function arrayDestructure(arr) {
+            let [a, , , ,b] = arr;
+            console.log(a);
+            console.log(b);
+        }
+
+        var arr = [1,2,2,2,4];
+        arrayDestructure(arr);
+
+        // Program 6
+
+        function arraySlice(arr) {
+            
+            return arr.slice(0, 2);
+        }
+
+        var arr = [1,2,2,2,4];
+        console.log(arraySlice(arr));
+
+
+    </script>
+</body>
+</html>
